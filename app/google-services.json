@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401293894700",
+    "project_id": "server-handover-app",
+    "storage_bucket": "server-handover-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401293894700:android:b0d88c95a4c27d7c421d89",
+        "android_client_info": {
+          "package_name": "com.techlambda.camerainstallation.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEHs01BfuiGKOiaEC2Ol5vmVYvbSPwxHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
