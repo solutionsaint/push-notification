@@ -32,16 +32,16 @@ object PushNotificationInitializer {
         val importance: Int
     )
 
-    fun initialize(context: Context, channelConfig: ChannelConfig? = null, userId: String) {
+    fun initialize(context: Context, channelConfig: ChannelConfig? = null) {
         if (FirebaseApp.getApps(context).isEmpty()) {
             FirebaseApp.initializeApp(context)
         }
         customChannelConfig = channelConfig
         createNotificationChannel(context)
-        deviceId = Secure.getString(context.getContentResolver(), Secure.ANDROID_ID)
+        /*deviceId = Secure.getString(context.getContentResolver(), Secure.ANDROID_ID)
         PushNotificationInitializer.userId = userId
         Log.d("Init", "initialize: DeviceId: $deviceId UserId: $userId")
-        sendTokenToServer(context)
+        sendTokenToServer(context)*/
     }
 
     private fun sendTokenToServer(context: Context) {

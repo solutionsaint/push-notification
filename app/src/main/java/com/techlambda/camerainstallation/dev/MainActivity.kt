@@ -48,9 +48,9 @@ class MainActivity : ComponentActivity() {
                                         Toast.LENGTH_SHORT
                                     ).show()
                                 }
-                                PushNotificationInitializer.initialize(this, userId = prefManager.getUserData()?.userId!!)
+                                PushNotificationInitializer.initialize(this)
                             }else {
-                                PushNotificationInitializer.initialize(this, userId = prefManager.getUserData()?.userId!!)
+                                PushNotificationInitializer.initialize(this)
                             }
                             AppNavHost(Modifier)
                         }else {

@@ -37,7 +37,7 @@ android {
         jvmTarget = "1.8"
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.7"
     }
 }
 
@@ -90,7 +90,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.solutionsaint"
                 artifactId = "pushnotificationlibrary"
-                version = "1.0.2"
+                version = "1.0.4"
             }
         }
     }
