@@ -6,6 +6,7 @@ import android.content.Context
 import android.os.Build
 import android.provider.Settings.Secure
 import android.util.Log
+import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
 import com.techlambda.pushnotificationlibrary.data.TokenRequest
@@ -90,7 +91,10 @@ object PushNotificationInitializer {
         }
     }
 
-    fun clearToken() {
-        FirebaseMessaging.getInstance().deleteToken()
+    fun clearToken(): Task<Void> {
+        return FirebaseMessaging.getInstance().deleteToken()
+    }
+    fun newToken(): Task<String> {
+        return FirebaseMessaging.getInstance().token
     }
 }
