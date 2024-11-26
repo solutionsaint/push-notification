@@ -7,6 +7,7 @@ import android.os.Build
 import android.provider.Settings.Secure
 import android.util.Log
 import com.google.firebase.FirebaseApp
+import com.google.firebase.messaging.FirebaseMessaging
 import com.techlambda.pushnotificationlibrary.data.TokenRequest
 import com.techlambda.pushnotificationlibrary.di.PushNotificationEntryPoint
 import com.techlambda.pushnotificationlibrary.repository.TokenRepository
@@ -87,5 +88,9 @@ object PushNotificationInitializer {
                 notificationManager.createNotificationChannel(channel)
             }
         }
+    }
+
+    fun clearToken() {
+        FirebaseMessaging.getInstance().deleteToken()
     }
 }
